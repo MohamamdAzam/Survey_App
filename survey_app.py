@@ -14,7 +14,8 @@ logger = logging.getLogger("SurveyProcessor")
 
 
 app = Sanic("SurveyProcessor")
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+# CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "https://magical-profiterole-f67df4.netlify.app"]}})
 
 
 load_dotenv()
